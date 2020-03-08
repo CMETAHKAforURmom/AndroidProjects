@@ -46,10 +46,6 @@ public class Messages extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
 
     private void rebuild() {
