@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "871512468454",
+    "firebase_url": "https://social-eff86.firebaseio.com",
+    "project_id": "social-eff86",
+    "storage_bucket": "social-eff86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871512468454:android:d6a5840d3692a894574427",
+        "android_client_info": {
+          "package_name": "com.tryl.social"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871512468454-o9a1h87js2umlm52st9mkl2m9kmdkjou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tryl.social",
+            "certificate_hash": "7ea2c5301765eeae57266bce65d91e4ffbe03a52"
+          }
+        },
+        {
+          "client_id": "871512468454-1p20jb8ca72v0kf35j7bil6o4u5kdo7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbpHPz5dMmiZ1CSu9X00w8hkBp-MEw1fM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871512468454-1p20jb8ca72v0kf35j7bil6o4u5kdo7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
