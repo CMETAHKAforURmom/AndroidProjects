@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -23,11 +24,15 @@ public class Messages extends AppCompatActivity {
 
     String mess;
     long inte;
+    ArrayList<Message> ms_list;
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
+
+        mContext = getApplicationContext();
 
         inte = getIntent().getLongExtra("DIALOG_ID", 4);
 
@@ -36,7 +41,6 @@ public class Messages extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 mess = dataSnapshot.child("dialogs").child(String.valueOf(inte)).child("some_mess").getValue(String.class);
-                Log.i("Aee", mess);
                 rebuild();
             }
 
@@ -50,10 +54,14 @@ public class Messages extends AppCompatActivity {
 
     private void rebuild() {
 
-        String[] tryer = {mess};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tryer);
+        ms_list = new ArrayList<Message>();
+        ms_list.add(new Message(true, "Hello"));
+        ms_list.add(new Message(false, "Hello"));
+
+        MessAdapter ms_adapter = new MessAdapter(mContext, ms_list);
+
         ListView LView = findViewById(R.id.list);
-        LView.setAdapter(adapter);
+        LView.setAdapter(ms_adapter);
 
     }
 }
