@@ -60,12 +60,8 @@ public class MessAdapter extends BaseAdapter {
 
 
         if(ms.side_user){
-            message.setText("I am send");
-
             layout.setGravity(Gravity.RIGHT);
         }else{
-            message.setText("He send");
-
             layout.setGravity(Gravity.LEFT);
         }
 
