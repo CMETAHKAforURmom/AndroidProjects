@@ -33,7 +33,7 @@ public class MessagesList extends Fragment {
     ArrayList<User_messages> UM;
     Context mContext;
     ListView LView;
-    String TAG_ID = "DIALOG_ID";
+    String TAG_DIALOG_ID = "DIALOG_ID";
 
     @Nullable
     @Override
@@ -74,7 +74,7 @@ public class MessagesList extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent message = new Intent(getContext(), Messages.class);
-                message.putExtra(TAG_ID, UM.get(position).getId());
+                message.putExtra(TAG_DIALOG_ID, UM.get(position).getId());
                 startActivity(message);
 
             }

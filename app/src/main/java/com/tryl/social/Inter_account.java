@@ -70,8 +70,7 @@ public class Inter_account extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent message = new Intent(getContext(), Messages.class);
-                message.putExtra(TAG_ID, UM.get(position).getId());
+                Intent message = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(message);
 
             }
